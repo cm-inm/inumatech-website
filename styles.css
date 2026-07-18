@@ -114,9 +114,9 @@ p {
   justify-content: space-between;
   gap: 18px;
   padding: 0 max(18px, calc((100vw - var(--max)) / 2));
-  color: #dddddd;
-  background: var(--ink);
-  border-bottom: 1px solid var(--line-dark);
+  color: var(--ink-2);
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
   font-size: 0.82rem;
 }
 
@@ -135,7 +135,7 @@ p {
 
 .topline a:hover,
 .topline a:focus-visible {
-  color: var(--paper);
+  color: var(--brand);
   outline: none;
 }
 
