@@ -1,9 +1,17 @@
 # Local temporary and generated files
 tmp/
 
+# Local environment variables and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+
 # OS and editor metadata
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
-
