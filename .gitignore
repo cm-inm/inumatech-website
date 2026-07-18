@@ -1,0 +1,9 @@
+# Local temporary and generated files
+tmp/
+
+# OS and editor metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
