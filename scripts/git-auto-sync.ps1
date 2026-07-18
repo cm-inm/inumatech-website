@@ -1,6 +1,5 @@
 param(
-    [string]$RepositoryPath = (Split-Path -Parent $PSScriptRoot),
-    [int]$QuietSeconds = 10
+    [string]$RepositoryPath = (Split-Path -Parent $PSScriptRoot)
 )
 
 $ErrorActionPreference = 'Continue'
@@ -46,24 +45,8 @@ function Sync-Repository {
     }
 }
 
-Write-SyncLog 'Auto-sync watcher started.'
-$lastStatus = ''
-$stableSince = Get-Date
 try {
-    while ($true) {
-        Start-Sleep -Seconds 2
-        $currentStatus = (& $gitPath -C $RepositoryPath status --porcelain) -join "`n"
-        if ($currentStatus -ne $lastStatus) {
-            $lastStatus = $currentStatus
-            $stableSince = Get-Date
-            continue
-        }
-        if ($currentStatus -and ((Get-Date) - $stableSince).TotalSeconds -ge $QuietSeconds) {
-            Sync-Repository
-            $lastStatus = ''
-            $stableSince = Get-Date
-        }
-    }
+    Sync-Repository
 } finally {
     $lockStream.Dispose()
 }
