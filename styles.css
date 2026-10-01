@@ -11,6 +11,10 @@
   --line: rgba(37, 37, 37, 0.12);
   --line-dark: rgba(37, 37, 37, 0.14);
   --max: 1180px;
+  --page-pattern: url("assets/pattern-topography.svg");
+  --page-pattern-size: 600px 600px;
+  --page-pattern-opacity: 0.032;
+  --page-pattern-opacity-dark: 0.06;
 }
 
 * {
@@ -270,6 +274,26 @@ p {
   background: rgba(238, 238, 238, 0.58);
 }
 
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image: var(--page-pattern);
+  background-size: var(--page-pattern-size);
+  opacity: var(--page-pattern-opacity);
+  pointer-events: none;
+}
+
+.hero::after,
+.section::before,
+.contact-section::after,
+.site-footer::before {
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: repeat;
+}
+
 .hero-media {
   position: absolute;
   inset: 0;
@@ -285,7 +309,7 @@ p {
 
 .hero-inner {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: min(100%, var(--max));
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(300px, 0.38fr);
@@ -416,7 +440,32 @@ p {
 }
 
 .section {
+  position: relative;
+  isolation: isolate;
   padding: 98px 24px;
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--page-pattern);
+  background-size: var(--page-pattern-size);
+  opacity: var(--page-pattern-opacity);
+  pointer-events: none;
+}
+
+.section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section-ink::before,
+.experience-section::before {
+  filter: invert(1);
+  opacity: var(--page-pattern-opacity-dark);
 }
 
 .section-paper {
@@ -457,23 +506,10 @@ p {
 .capabilities-section,
 .development-section {
   position: relative;
-  isolation: isolate;
-  overflow: hidden;
 }
 
 .about-section {
   background-color: #faf8f8;
-}
-
-.about-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background-image: url("assets/pattern-topography.svg");
-  background-size: 600px 600px;
-  opacity: 0.026;
-  pointer-events: none;
 }
 
 .about-section::after {
@@ -498,17 +534,11 @@ p {
 
 .services-section {
   background-color: #f4f3f3;
-  background-image: radial-gradient(circle at 1px 1px, rgba(236, 32, 36, 0.12) 1px, transparent 1.2px);
-  background-size: 26px 26px;
 }
 
 .capabilities-section {
   background-color: #f7f7f7;
-  background-image:
-    linear-gradient(rgba(37, 37, 37, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 37, 37, 0.035) 1px, transparent 1px),
-    linear-gradient(145deg, #fafafa 0%, #eeeeee 100%);
-  background-size: 42px 42px, 42px 42px, auto;
+  background-image: linear-gradient(145deg, #fafafa 0%, #eeeeee 100%);
 }
 
 .development-section {
@@ -830,10 +860,10 @@ p {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url("assets/pattern-circuit-board.svg");
-  background-size: 304px 304px;
+  background-image: var(--page-pattern);
+  background-size: var(--page-pattern-size);
   filter: invert(1);
-  opacity: 0.045;
+  opacity: var(--page-pattern-opacity-dark);
   pointer-events: none;
 }
 
@@ -899,9 +929,9 @@ p {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url("assets/pattern-circuit-board.svg");
-  background-size: 304px 304px;
-  opacity: 0.025;
+  background-image: var(--page-pattern);
+  background-size: var(--page-pattern-size);
+  opacity: var(--page-pattern-opacity);
   pointer-events: none;
 }
 
@@ -988,10 +1018,10 @@ p {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url("assets/pattern-topography.svg");
-  background-size: 600px 600px;
+  background-image: var(--page-pattern);
+  background-size: var(--page-pattern-size);
   filter: invert(1);
-  opacity: 0.075;
+  opacity: var(--page-pattern-opacity-dark);
   pointer-events: none;
 }
 
@@ -1063,6 +1093,17 @@ p {
   inset: 0;
   z-index: 1;
   background: linear-gradient(90deg, rgba(245, 245, 245, 0.97) 0%, rgba(245, 245, 245, 0.92) 48%, rgba(245, 245, 245, 0.74) 100%);
+}
+
+.contact-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: var(--page-pattern);
+  background-size: var(--page-pattern-size);
+  opacity: var(--page-pattern-opacity);
+  pointer-events: none;
 }
 
 .contact-image {
@@ -1158,10 +1199,10 @@ p {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url("assets/pattern-circuit-board.svg");
-  background-size: 304px 304px;
+  background-image: var(--page-pattern);
+  background-size: var(--page-pattern-size);
   filter: invert(1);
-  opacity: 0.022;
+  opacity: var(--page-pattern-opacity-dark);
   pointer-events: none;
 }
 
