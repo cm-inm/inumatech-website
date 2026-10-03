@@ -10,6 +10,7 @@
   --warm: #fafafa;
   --line: rgba(37, 37, 37, 0.12);
   --line-dark: rgba(37, 37, 37, 0.14);
+  --section-dark: rgba(32, 29, 30, 0.96);
   --max: 1180px;
   --backdrop-pattern: url("assets/pattern-circuit-board.svg");
   --backdrop-pattern-size: 420px 420px;
@@ -835,7 +836,7 @@ p {
   position: relative;
   isolation: isolate;
   padding-top: 104px;
-  background: rgba(52, 52, 52, 0.96);
+  background: var(--section-dark);
   overflow: hidden;
 }
 
@@ -992,7 +993,7 @@ p {
   position: relative;
   isolation: isolate;
   color: var(--paper);
-  background: rgba(32, 29, 30, 0.96);
+  background: var(--section-dark);
   overflow: hidden;
 }
 
