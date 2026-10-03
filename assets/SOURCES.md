@@ -12,3 +12,7 @@ All photographs below are conventional photography downloaded from their origina
 ## Patterns
 
 - `pattern-circuit-board.svg` and `pattern-topography.svg` — Hero Patterns by Steve Schoger. Source: https://heropatterns.com/ and https://github.com/sschoger/hero-patterns — CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+
+## Partner logos
+
+- Files in `partner-logos/` used by the Partner ecosystem section are reproduced from pages 9–10 of `docs/inuma-company-profile.pdf`. All trademarks belong to their respective owners.
