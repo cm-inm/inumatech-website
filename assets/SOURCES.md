@@ -15,8 +15,8 @@ All photographs below are conventional photography downloaded from their origina
 
 ## Partner logos
 
-- HP, Lenovo, Dell, Veeam, Kaspersky, Fortinet, Red Hat, Cisco, Samsung, NetApp, and VMware SVGs — Simple Icons CDN: https://cdn.simpleicons.org/
-- Microsoft, IBM, Adobe, and Hewlett Packard Enterprise SVGs — Wikimedia Commons original files: https://commons.wikimedia.org/
+- HP, Lenovo, Dell, Veeam, Kaspersky, Fortinet, Red Hat, Cisco, Samsung, and VMware SVGs — Simple Icons CDN: https://cdn.simpleicons.org/
+- Microsoft, IBM, Adobe, Hewlett Packard Enterprise, and NetApp wordmark SVGs — Wikimedia Commons original files: https://commons.wikimedia.org/
 - Mitsumi Distribution and APC SVGs — Worldvectorlogo: https://worldvectorlogo.com/
 - `axiz-online.png` — Axiz official website: https://info.axiz.com/wp-content/uploads/2022/06/Axiz_logo-transparent.png
 - `redington.svg` — Redington official website: https://redingtongroup.com/wp-content/themes/redington/assets/images/logo-green.svg
