@@ -47,7 +47,7 @@ body::before {
   background-image: var(--backdrop-pattern);
   background-position: center top;
   background-size: var(--backdrop-pattern-size);
-  opacity: 0.065;
+  opacity: 0.08;
   filter: drop-shadow(1px 1px 0 rgba(255, 255, 255, 0.92));
   pointer-events: none;
 }
