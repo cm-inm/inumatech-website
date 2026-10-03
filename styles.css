@@ -476,6 +476,7 @@ p {
 .process-grid,
 .partner-grid,
 .growth-grid,
+.client-groups,
 .client-list,
 .team-grid,
 .section-title,
@@ -963,6 +964,28 @@ p {
 .client-list {
   max-width: 1040px;
   margin-top: 34px;
+}
+
+.client-groups {
+  margin-top: 36px;
+}
+
+.client-group-title {
+  margin: 0;
+  color: #f1f1f1;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.client-groups .client-list {
+  margin-top: 14px;
+}
+
+.client-groups .client-group-title:not(:first-child) {
+  margin-top: 38px;
 }
 
 .experience-section {
