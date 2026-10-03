@@ -15,4 +15,10 @@ All photographs below are conventional photography downloaded from their origina
 
 ## Partner logos
 
-- Files in `partner-logos/` used by the Partner ecosystem section are reproduced from pages 9–10 of `docs/inuma-company-profile.pdf`. All trademarks belong to their respective owners.
+- HP, Lenovo, Dell, Veeam, Kaspersky, Fortinet, Red Hat, Cisco, Samsung, NetApp, and VMware SVGs — Simple Icons CDN: https://cdn.simpleicons.org/
+- Microsoft, IBM, Adobe, and Hewlett Packard Enterprise SVGs — Wikimedia Commons original files: https://commons.wikimedia.org/
+- Mitsumi Distribution and APC SVGs — Worldvectorlogo: https://worldvectorlogo.com/
+- `axiz-online.png` — Axiz official website: https://info.axiz.com/wp-content/uploads/2022/06/Axiz_logo-transparent.png
+- `redington.svg` — Redington official website: https://redingtongroup.com/wp-content/themes/redington/assets/images/logo-green.svg
+- `ruckus-online.png` — Ruckus Networks official website: https://www.ruckusnetworks.com/
+- Partner selection follows pages 9–10 of `docs/inuma-company-profile.pdf`. All trademarks belong to their respective owners.
