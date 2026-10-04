@@ -938,6 +938,15 @@ p {
   max-height: 82px;
 }
 
+.partner-logo.partner-logo--xl {
+  padding: 8px;
+}
+
+.partner-logo--xl img {
+  max-width: 215px;
+  max-height: 90px;
+}
+
 .client-list {
   display: flex;
   flex-wrap: wrap;
