@@ -15,10 +15,13 @@ All photographs below are conventional photography downloaded from their origina
 
 ## Partner logos
 
-- HP, Lenovo, Dell, Veeam, Kaspersky, Fortinet, Red Hat, Cisco, Samsung, and VMware SVGs — Simple Icons CDN: https://cdn.simpleicons.org/
+- HP, Lenovo, Dell, Veeam, Kaspersky, Cisco, Samsung, and VMware SVGs — Simple Icons CDN: https://cdn.simpleicons.org/
 - Microsoft, IBM, Adobe, Hewlett Packard Enterprise, and NetApp wordmark SVGs — Wikimedia Commons original files: https://commons.wikimedia.org/
-- Mitsumi Distribution and APC SVGs — Worldvectorlogo: https://worldvectorlogo.com/
+- APC SVG — Worldvectorlogo: https://worldvectorlogo.com/
 - `axiz-online.png` — Axiz official website: https://info.axiz.com/wp-content/uploads/2022/06/Axiz_logo-transparent.png
 - `redington.svg` — Redington official website: https://redingtongroup.com/wp-content/themes/redington/assets/images/logo-green.svg
 - `ruckus-online.png` — Ruckus Networks official website: https://www.ruckusnetworks.com/
+- `fortinet-wordmark.svg` — Fortinet official press assets: https://www.fortinet.com/content/dam/fortinet/images/general/fortinet-logo.svg
+- `red-hat-wordmark.svg` — Red Hat official brand standards: https://www.redhat.com/en/about/brand/standards/logo
+- `mitsumi-distribution.jpg` — Mitsumi Distribution press media: https://mma.prnewswire.com/media/2663660/Mitsumi_Logo.jpg
 - Partner selection follows pages 9–10 of `docs/inuma-company-profile.pdf`. All trademarks belong to their respective owners.
