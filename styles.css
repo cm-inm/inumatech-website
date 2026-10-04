@@ -333,21 +333,6 @@ p {
   box-shadow: 0 20px 48px rgba(37, 37, 37, 0.12);
 }
 
-.eyebrow {
-  margin-bottom: 14px;
-  color: var(--red);
-  font-size: 0.76rem;
-  font-weight: 800;
-  line-height: 1.4;
-  text-transform: uppercase;
-}
-
-.hero .eyebrow,
-.section-ink .eyebrow,
-.contact-panel .eyebrow {
-  color: var(--red);
-}
-
 .hero-lead {
   max-width: 710px;
   margin-bottom: 0;
