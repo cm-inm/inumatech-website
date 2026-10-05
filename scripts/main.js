@@ -3,6 +3,7 @@ const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const hero = document.querySelector(".hero");
 const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
+const formStatus = document.querySelector("[data-form-status]");
 
 const closeNavigation = () => {
   if (!nav || !navToggle) {
@@ -87,4 +88,10 @@ if (revealItems.length > 0) {
   } else {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
+}
+
+if (formStatus && new URLSearchParams(window.location.search).get("message") === "sent") {
+  formStatus.hidden = false;
+  const cleanUrl = `${window.location.pathname}${window.location.hash}`;
+  window.history.replaceState({}, "", cleanUrl);
 }

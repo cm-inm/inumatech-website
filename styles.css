@@ -340,8 +340,7 @@ p {
   font-size: 1.18rem;
 }
 
-.hero-actions,
-.contact-actions {
+.hero-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1091,7 +1090,7 @@ p {
 }
 
 .contact-panel,
-.contact-details {
+.contact-form {
   position: relative;
   z-index: 2;
 }
@@ -1102,51 +1101,60 @@ p {
   font-size: 1.04rem;
 }
 
-.contact-details {
+.contact-form {
   display: grid;
-  padding: 10px;
-  font-style: normal;
+  gap: 10px;
+  padding: 28px;
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid var(--line-dark);
   border-radius: 8px;
   backdrop-filter: blur(14px);
 }
 
-.contact-details a,
-.contact-details p {
-  display: block;
-  margin: 0;
-  padding: 18px;
-  border-bottom: 1px solid var(--line-dark);
-}
-
-.contact-details p:last-child {
-  border-bottom: 0;
-}
-
-.contact-details span,
-.contact-details strong {
-  display: block;
-}
-
-.contact-details span {
-  margin-bottom: 8px;
-  color: var(--slate);
-  font-size: 0.76rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.contact-details strong {
+.contact-form label {
   color: var(--ink);
-  font-weight: 680;
-  line-height: 1.48;
-  overflow-wrap: anywhere;
+  font-size: 0.82rem;
+  font-weight: 750;
 }
 
-.contact-details a:hover strong,
-.contact-details a:focus-visible strong {
-  color: var(--red);
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 13px 14px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--line-dark);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 142px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--red);
+  outline: 3px solid rgba(236, 32, 36, 0.12);
+}
+
+.contact-form .button {
+  width: fit-content;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -10000px;
+}
+
+.contact-form .form-status {
+  margin: 4px 0 0;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 700;
 }
 
 .site-footer {
@@ -1398,8 +1406,7 @@ p {
     font-size: 1rem;
   }
 
-  .hero-actions,
-  .contact-actions {
+  .hero-actions {
     display: grid;
     grid-template-columns: 1fr;
     align-items: stretch;
@@ -1559,6 +1566,10 @@ p {
   .contact-section::before,
   .contact-image {
     inset-inline: 0;
+  }
+
+  .contact-form .button {
+    width: 100%;
   }
 
   .footer-main {
