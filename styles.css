@@ -1051,11 +1051,9 @@ p {
   width: 100%;
   max-width: none;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.48fr);
-  gap: 48px;
-  align-items: center;
+  place-items: center;
   min-height: 620px;
-  padding: 92px max(24px, calc((100vw - var(--max)) / 2));
+  padding: 84px 24px;
   color: var(--ink);
   background: #f2f2f2;
   overflow: hidden;
@@ -1085,18 +1083,29 @@ p {
   filter: grayscale(0.45) saturate(0.7) contrast(0.95) opacity(0.62);
 }
 
+.contact-card {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 640px);
+  padding: 36px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line-dark);
+  border-radius: 8px;
+  box-shadow: 0 22px 60px rgba(37, 37, 37, 0.1);
+  backdrop-filter: blur(14px);
+}
+
+.contact-panel {
+  margin-bottom: 26px;
+}
+
 .contact-panel h2 {
   color: var(--ink);
 }
 
-.contact-panel,
-.contact-form {
-  position: relative;
-  z-index: 2;
-}
-
 .contact-panel p {
-  max-width: 660px;
+  max-width: 520px;
+  margin-bottom: 0;
   color: var(--slate);
   font-size: 1.04rem;
 }
@@ -1104,11 +1113,6 @@ p {
 .contact-form {
   display: grid;
   gap: 10px;
-  padding: 28px;
-  background: rgba(255, 255, 255, 0.86);
-  border: 1px solid var(--line-dark);
-  border-radius: 8px;
-  backdrop-filter: blur(14px);
 }
 
 .contact-form label {
@@ -1557,8 +1561,6 @@ p {
 
   .contact-section {
     width: 100%;
-    grid-template-columns: 1fr;
-    gap: 34px;
     min-height: auto;
     padding: 74px 18px;
   }
@@ -1570,6 +1572,10 @@ p {
 
   .contact-form .button {
     width: 100%;
+  }
+
+  .contact-card {
+    padding: 24px;
   }
 
   .footer-main {
