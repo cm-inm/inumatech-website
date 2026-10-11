@@ -4,6 +4,7 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const hero = document.querySelector(".hero");
 const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
 const formStatus = document.querySelector("[data-form-status]");
+const hoverNavigationQuery = window.matchMedia("(min-width: 861px) and (hover: hover) and (pointer: fine)");
 
 const closeNavigation = () => {
   if (!nav || !navToggle) {
@@ -64,6 +65,40 @@ if (nav && navToggle) {
     }
   });
 }
+
+document.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
+  const summary = dropdown.querySelector("summary");
+
+  if (!summary) {
+    return;
+  }
+
+  dropdown.addEventListener("mouseenter", () => {
+    if (hoverNavigationQuery.matches) {
+      dropdown.setAttribute("open", "");
+    }
+  });
+
+  summary.addEventListener("click", (event) => {
+    if (hoverNavigationQuery.matches && event.detail > 0) {
+      event.preventDefault();
+      dropdown.removeAttribute("open");
+      summary.blur();
+    }
+  });
+
+  dropdown.addEventListener("mouseleave", () => {
+    if (!hoverNavigationQuery.matches) {
+      return;
+    }
+
+    dropdown.removeAttribute("open");
+
+    if (document.activeElement instanceof HTMLElement && dropdown.contains(document.activeElement)) {
+      document.activeElement.blur();
+    }
+  });
+});
 
 setHeaderState();
 window.addEventListener("scroll", setHeaderState, { passive: true });
