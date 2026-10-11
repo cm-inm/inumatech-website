@@ -15,6 +15,10 @@ const closeNavigation = () => {
   navToggle.setAttribute("aria-expanded", "false");
   navToggle.setAttribute("aria-label", "Open navigation");
   document.body.classList.remove("nav-open");
+
+  nav.querySelectorAll("details[open]").forEach((dropdown) => {
+    dropdown.removeAttribute("open");
+  });
 };
 
 const setHeaderState = () => {

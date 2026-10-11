@@ -25,3 +25,18 @@ All photographs below are conventional photography downloaded from their origina
 - `red-hat-wordmark.svg` — Red Hat official brand standards: https://www.redhat.com/en/about/brand/standards/logo
 - `mitsumi-distribution.jpg` — Mitsumi Distribution press media: https://mma.prnewswire.com/media/2663660/Mitsumi_Logo.jpg
 - Partner selection follows pages 9–10 of `docs/inuma-company-profile.pdf`. All trademarks belong to their respective owners.
+
+# Client and partner logos
+
+- UNDP: https://commons.wikimedia.org/wiki/File:UNDP_logo.svg
+- GIZ: https://www.giz.de/themes/custom/dreist/build/giz-logo-with-claim.svg
+- World Vision: https://www.wvi.org/themes/custom/wvi_2018/logo.svg
+- Carnegie Mellon University: https://engineering.cmu.edu/_files/images/svg/carnegie-mellon.svg
+- Rwanda Social Security Board: https://www.rssb.rw/
+- Zipline: https://www.zipline.com/images/ui/logomark-single-outline.svg
+- One Acre Fund: https://oneacrefund.org/themes/custom/oaf/assets/favicon/favicon.svg
+- RwandAir: https://www.rwandair.com/dist/phoenix/V1.0/img/logo.svg
+- University of Global Health Equity: https://ughe.org/wp-content/uploads/2026/04/UGHE-H.png
+- Proxtera: https://proxtera.com/wp-content/uploads/2022/10/proxtera_logo_db.png
+- Apple, NASA, and Grammarly marks: https://simpleicons.org/
+- Palo Alto Networks: https://commons.wikimedia.org/wiki/File:Palo-Alto-Networks-logo.svg (source identified as Palo Alto Networks)
