@@ -1912,8 +1912,9 @@ p {
 
 .logo-tile img {
   width: 100%;
-  max-width: 160px;
-  max-height: 70px;
+  max-width: 174px;
+  max-height: 66px;
+  display: block;
   object-fit: contain;
 }
 

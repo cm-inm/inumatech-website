@@ -15,9 +15,15 @@ All photographs below are conventional photography downloaded from their origina
 
 ## Partner logos
 
-- HP, Lenovo, Dell, Veeam, Kaspersky, Cisco, Samsung, and VMware SVGs — Simple Icons CDN: https://cdn.simpleicons.org/
-- Microsoft, IBM, Adobe, Hewlett Packard Enterprise, and NetApp wordmark SVGs — Wikimedia Commons original files: https://commons.wikimedia.org/
-- APC SVG — Worldvectorlogo: https://worldvectorlogo.com/
+- Lenovo wordmark — Wikimedia Commons original file: https://commons.wikimedia.org/wiki/File:Lenovo_logo_2015.svg; usage follows Lenovo Brand World: https://brandworld.lenovo.com/visual-identity/logo/
+- Dell Technologies wordmark — Wikimedia Commons original file: https://commons.wikimedia.org/wiki/File:Dell_Technologies_logo.svg; brand reference: https://www.dell.com/en-us/lp/dt/our-brand
+- Veeam wordmark — Wikimedia Commons original file: https://commons.wikimedia.org/wiki/File:Veeam_2022_logo.svg; official brand resource center: https://www.veeam.com/company/brand-resource-center.html
+- Kaspersky wordmark — Wikimedia Commons original file: https://commons.wikimedia.org/wiki/File:Kaspersky_logo.svg
+- Cisco wordmark — Wikimedia Commons original file: https://commons.wikimedia.org/wiki/File:Cisco_logo_blue_2016.svg
+- Adobe wordmark — Wikimedia Commons original file: https://commons.wikimedia.org/wiki/File:Adobe_logo_and_wordmark_(2017).svg
+- VMware wordmark — Wikimedia Commons original file: https://commons.wikimedia.org/wiki/File:VMware_logo.svg
+- APC by Schneider Electric wordmark — Wikimedia Commons original file: https://commons.wikimedia.org/wiki/File:APC_by_Schneider_Electric.png
+- Microsoft, IBM, and NetApp wordmark SVGs — Wikimedia Commons original files: https://commons.wikimedia.org/
 - `axiz-online.png` — Axiz official website: https://info.axiz.com/wp-content/uploads/2022/06/Axiz_logo-transparent.png
 - `redington.svg` — Redington official website: https://redingtongroup.com/wp-content/themes/redington/assets/images/logo-green.svg
 - `ruckus-online.png` — Ruckus Networks official website: https://www.ruckusnetworks.com/
@@ -33,10 +39,11 @@ All photographs below are conventional photography downloaded from their origina
 - World Vision: https://www.wvi.org/themes/custom/wvi_2018/logo.svg
 - Carnegie Mellon University: https://engineering.cmu.edu/_files/images/svg/carnegie-mellon.svg
 - Rwanda Social Security Board: https://www.rssb.rw/
-- Zipline: https://www.zipline.com/images/ui/logomark-single-outline.svg
-- One Acre Fund: https://oneacrefund.org/themes/custom/oaf/assets/favicon/favicon.svg
-- RwandAir: https://www.rwandair.com/dist/phoenix/V1.0/img/logo.svg
+- Zipline wordmark: https://commons.wikimedia.org/wiki/File:Zipline_logo_2023_01.svg; official brand guidance: https://www.zipline.com/about/logos-brand-guidelines
+- One Acre Fund wordmark: https://oneacrefund.org/themes/custom/oaf/assets/img/symbol/svg/sprite.symbol.svg?v=13
+- RwandAir wordmark: https://commons.wikimedia.org/wiki/File:RwandAir_Logotype.png; official website: https://www.rwandair.com/
 - University of Global Health Equity: https://ughe.org/wp-content/uploads/2026/04/UGHE-H.png
 - Proxtera: https://proxtera.com/wp-content/uploads/2022/10/proxtera_logo_db.png
-- Apple, NASA, and Grammarly marks: https://simpleicons.org/
+- Apple and NASA marks: https://simpleicons.org/
+- Grammarly wordmark: https://commons.wikimedia.org/wiki/File:Grammarly_logo_2024.svg
 - Palo Alto Networks: https://commons.wikimedia.org/wiki/File:Palo-Alto-Networks-logo.svg (source identified as Palo Alto Networks)
