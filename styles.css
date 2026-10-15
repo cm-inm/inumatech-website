@@ -2040,6 +2040,10 @@ p {
   animation-duration: 54s;
 }
 
+.logo-track-cyber {
+  animation-duration: 22s;
+}
+
 .logo-marquee:hover .logo-track,
 .logo-marquee:focus-within .logo-track {
   animation-play-state: paused;
@@ -2076,19 +2080,6 @@ p {
 }
 
 .logo-marquee-dark .logo-tile {
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-.cyber-experience-logos {
-  width: min(100%, 910px);
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  margin: 42px auto 0;
-}
-
-.cyber-experience-logos .logo-tile {
-  width: 100%;
   border-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -2460,10 +2451,6 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .cyber-experience-logos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .offering-card {
     grid-template-rows: 270px 1fr;
   }
@@ -2526,10 +2513,6 @@ p {
 
 @media (max-width: 500px) {
   .footer-main {
-    grid-template-columns: 1fr;
-  }
-
-  .cyber-experience-logos {
     grid-template-columns: 1fr;
   }
 
