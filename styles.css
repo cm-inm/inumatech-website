@@ -1,26 +1,4 @@
-@font-face {
-  font-family: "Gotham";
-  src: local("Gotham"), local("Gotham Book"), local("Gotham-Book");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: local("Gotham Medium"), local("Gotham-Medium");
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: local("Gotham Bold"), local("Gotham-Bold");
-  font-style: normal;
-  font-weight: 700 900;
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap");
 
 :root {
   --red: #ec2024;
@@ -59,7 +37,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: #efeeee;
-  font-family: "Gotham", "Montserrat", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0;
   overflow-x: hidden;
 }
@@ -2101,6 +2079,19 @@ p {
   border-color: rgba(255, 255, 255, 0.15);
 }
 
+.cyber-experience-logos {
+  width: min(100%, 910px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 42px auto 0;
+}
+
+.cyber-experience-logos .logo-tile {
+  width: 100%;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
 @keyframes logo-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -2469,6 +2460,10 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .cyber-experience-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .offering-card {
     grid-template-rows: 270px 1fr;
   }
@@ -2531,6 +2526,10 @@ p {
 
 @media (max-width: 500px) {
   .footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .cyber-experience-logos {
     grid-template-columns: 1fr;
   }
 

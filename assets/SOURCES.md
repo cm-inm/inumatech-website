@@ -44,6 +44,6 @@ All photographs below are conventional photography downloaded from their origina
 - RwandAir wordmark: https://commons.wikimedia.org/wiki/File:RwandAir_Logotype.png; official website: https://www.rwandair.com/
 - University of Global Health Equity: https://ughe.org/wp-content/uploads/2026/04/UGHE-H.png
 - Proxtera: https://proxtera.com/wp-content/uploads/2022/10/proxtera_logo_db.png
-- Apple and NASA marks: https://simpleicons.org/
+- Apple, NASA, and Pinterest marks: https://simpleicons.org/
 - Grammarly wordmark: https://commons.wikimedia.org/wiki/File:Grammarly_logo_2024.svg
 - Palo Alto Networks: https://commons.wikimedia.org/wiki/File:Palo-Alto-Networks-logo.svg (source identified as Palo Alto Networks)
