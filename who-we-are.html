@@ -7,14 +7,16 @@
     <title>Who We Are | Inuma Technology</title>
     <link rel="preload" as="image" href="assets/ai/future-workspace.jpg" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
   </head>
   <body class="product-page about-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="topline"><p>Kigali, Rwanda</p><div><a href="tel:+250780785348">+250 780 785 348</a><a href="mailto:info@inumatechnology.com">info@inumatechnology.com</a></div></div>
 
     <header class="site-header is-product-header" data-header>
       <a class="brand" href="index.html" aria-label="Inuma Technology home"><img src="assets/inuma-tech-logo.svg" alt="Inuma Technology" /></a>
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle><span></span><span></span></button>
-      <nav class="site-nav" aria-label="Primary navigation" data-nav>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle><span></span><span></span></button>
+      <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation" data-nav>
         <a aria-current="page" href="who-we-are.html">Who We Are</a>
         <details class="nav-dropdown">
           <summary>Products and Services</summary>
@@ -24,7 +26,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="product-hero about-hero" aria-labelledby="about-title">
         <div class="product-hero-media" aria-hidden="true"><img src="assets/ai/future-workspace.jpg" alt="" fetchpriority="high" width="1672" height="941" /></div>
         <div class="product-hero-inner" data-reveal>

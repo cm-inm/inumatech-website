@@ -4,7 +4,9 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const hero = document.querySelector(".hero");
 const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
 const formStatus = document.querySelector("[data-form-status]");
-const hoverNavigationQuery = window.matchMedia("(min-width: 861px) and (hover: hover) and (pointer: fine)");
+const hoverNavigationQuery = window.matchMedia("(min-width: 961px) and (hover: hover) and (pointer: fine)");
+const mobileNavigationQuery = window.matchMedia("(max-width: 960px)");
+const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const closeNavigation = () => {
   if (!nav || !navToggle) {
@@ -53,14 +55,36 @@ if (nav && navToggle) {
 
   window.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
+      const wasOpen = nav.classList.contains("is-open");
       closeNavigation();
+      if (wasOpen) navToggle.focus();
+    }
+
+    if (event.key === "Tab" && mobileNavigationQuery.matches && nav.classList.contains("is-open")) {
+      const focusable = [navToggle, ...nav.querySelectorAll("a, summary")]
+        .filter((element) => element.getClientRects().length > 0);
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     }
   });
+
+  document.addEventListener("pointerdown", (event) => {
+    if (nav.classList.contains("is-open") && !header.contains(event.target)) closeNavigation();
+  });
+
+  mobileNavigationQuery.addEventListener("change", closeNavigation);
 
   window.addEventListener("resize", () => {
     setHeaderState();
 
-    if (window.innerWidth > 860) {
+    if (!mobileNavigationQuery.matches) {
       closeNavigation();
     }
   });
@@ -98,6 +122,57 @@ document.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
       document.activeElement.blur();
     }
   });
+
+  dropdown.addEventListener("focusout", (event) => {
+    if (!dropdown.contains(event.relatedTarget) && hoverNavigationQuery.matches) {
+      dropdown.removeAttribute("open");
+    }
+  });
+});
+
+// Repeat a complete logo set until it is wider than its viewport, then clone
+// that set once. The measured distance prevents gaps on wide screens.
+document.querySelectorAll(".logo-marquee").forEach((marquee) => {
+  const track = marquee.querySelector(".logo-track");
+  if (!track) return;
+  const originals = [...track.children].filter((tile) => !tile.hasAttribute("aria-hidden"));
+  if (!originals.length) return;
+  marquee.setAttribute("tabindex", "0");
+  marquee.setAttribute("role", "region");
+  let frame;
+
+  const rebuild = () => {
+    const tileWidth = originals[0].getBoundingClientRect().width;
+    if (!tileWidth) return;
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    const baseWidth = originals.length * (tileWidth + gap);
+    const repeats = Math.max(1, Math.ceil((marquee.clientWidth + tileWidth) / baseWidth));
+    const fragment = document.createDocumentFragment();
+    originals.forEach((tile) => fragment.append(tile));
+
+    const cloneSet = () => originals.forEach((tile) => {
+      const copy = tile.cloneNode(true);
+      copy.setAttribute("aria-hidden", "true");
+      copy.querySelectorAll("img").forEach((img) => { img.alt = ""; });
+      fragment.append(copy);
+    });
+
+    if (!reducedMotionQuery.matches) {
+      for (let i = 1; i < repeats * 2; i += 1) cloneSet();
+    }
+    track.replaceChildren(fragment);
+    track.style.setProperty("--marquee-distance", `${baseWidth * repeats}px`);
+    track.style.setProperty("--marquee-duration", `${baseWidth * repeats / 42}s`);
+  };
+
+  const schedule = () => {
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(rebuild);
+  };
+  if ("ResizeObserver" in window) new ResizeObserver(schedule).observe(marquee);
+  else window.addEventListener("resize", schedule);
+  reducedMotionQuery.addEventListener("change", schedule);
+  schedule();
 });
 
 setHeaderState();

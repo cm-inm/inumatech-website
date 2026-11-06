@@ -38,6 +38,7 @@ body {
   color: var(--ink);
   background: #efeeee;
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
   letter-spacing: 0;
   overflow-x: hidden;
 }
@@ -97,7 +98,7 @@ h1 {
   color: var(--ink);
   font-size: 5.9rem;
   line-height: 0.92;
-  font-weight: 700;
+  font-weight: 500;
   overflow-wrap: break-word;
   text-wrap: balance;
 }
@@ -112,7 +113,7 @@ h2 {
   color: var(--ink);
   font-size: 3.55rem;
   line-height: 1;
-  font-weight: 680;
+  font-weight: 500;
   text-wrap: balance;
 }
 
@@ -121,12 +122,17 @@ h3 {
   color: var(--ink);
   font-size: 1.25rem;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 p {
   color: var(--slate);
   line-height: 1.72;
+}
+
+strong,
+b {
+  font-weight: 500;
 }
 
 .topline {
@@ -219,7 +225,7 @@ p {
   color: #e5e5e5;
   border-radius: 8px;
   font-size: 0.94rem;
-  font-weight: 650;
+  font-weight: 500;
   transition: color 160ms ease, background 160ms ease, border-color 160ms ease;
 }
 
@@ -357,7 +363,7 @@ p {
   padding: 0 20px;
   border: 1px solid transparent;
   border-radius: 8px;
-  font-weight: 750;
+  font-weight: 500;
   line-height: 1.2;
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, color 160ms ease;
 }
@@ -420,7 +426,7 @@ p {
   margin-bottom: 6px;
   color: var(--slate);
   font-size: 0.74rem;
-  font-weight: 800;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -533,7 +539,7 @@ p {
   padding-top: 18px;
   border-top: 1px solid var(--line);
   color: var(--ink-2);
-  font-weight: 650;
+  font-weight: 500;
 }
 
 .team-grid p {
@@ -651,7 +657,7 @@ p {
   margin-bottom: 54px;
   color: var(--brand);
   font-size: 0.82rem;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .service-card-featured span {
@@ -675,7 +681,7 @@ p {
   margin-top: auto;
   padding-top: 22px;
   color: var(--red);
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .service-card-featured a {
@@ -735,7 +741,7 @@ p {
   border: 1px solid var(--line-dark);
   border-radius: 8px;
   font-size: 0.92rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .supply-layout {
@@ -771,7 +777,7 @@ p {
 .capability-stack span {
   color: var(--brand);
   font-size: 0.84rem;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .capability-stack p {
@@ -832,7 +838,7 @@ p {
   margin-bottom: 82px;
   color: var(--red);
   font-size: 0.82rem;
-  font-weight: 850;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -891,7 +897,7 @@ p {
   margin-bottom: 82px;
   color: var(--red);
   font-size: 0.86rem;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .process-grid p {
@@ -985,7 +991,7 @@ p {
   border: 1px solid var(--line);
   border-radius: 8px;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .client-list {
@@ -1001,7 +1007,7 @@ p {
   margin: 0;
   color: #f1f1f1;
   font-size: 0.78rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-align: center;
   text-transform: uppercase;
@@ -1194,7 +1200,7 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   font-size: 0.76rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .contact-form {
@@ -1219,7 +1225,7 @@ p {
 .contact-form label {
   color: var(--ink);
   font-size: 0.76rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.045em;
   text-transform: uppercase;
 }
@@ -1308,7 +1314,7 @@ p {
   border: 1px solid #cbe8d2;
   border-radius: 8px;
   font-size: 0.92rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .site-footer {
@@ -1364,7 +1370,7 @@ p {
   margin-bottom: 10px;
   color: var(--red);
   font-size: 0.76rem;
-  font-weight: 850;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -1373,7 +1379,7 @@ p {
 .footer-contact a {
   color: #d7d7d7;
   font-size: 0.96rem;
-  font-weight: 650;
+  font-weight: 500;
   overflow-wrap: anywhere;
 }
 
@@ -1861,7 +1867,7 @@ p {
   margin-bottom: 14px;
   color: var(--brand);
   font-size: 0.76rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.11em;
   line-height: 1.4;
   text-transform: uppercase;
@@ -1884,7 +1890,7 @@ p {
   color: #e5e5e5;
   border-radius: 8px;
   font-size: 0.94rem;
-  font-weight: 650;
+  font-weight: 500;
   list-style: none;
   cursor: pointer;
   transition: color 160ms ease, background 160ms ease;
@@ -2013,7 +2019,7 @@ p {
   margin-bottom: 36px;
   color: var(--brand);
   font-size: 0.75rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -2027,7 +2033,7 @@ p {
   margin-top: auto;
   padding-top: 18px;
   color: var(--brand);
-  font-weight: 750;
+  font-weight: 500;
 }
 
 .text-link:hover,
@@ -2255,7 +2261,7 @@ p {
   margin-bottom: 64px;
   color: var(--brand);
   font-size: 0.78rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -2316,7 +2322,7 @@ p {
   margin-bottom: 34px;
   color: var(--brand);
   font-size: 0.76rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
