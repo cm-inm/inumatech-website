@@ -311,8 +311,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 56%;
-  filter: grayscale(0.55) saturate(0.72) contrast(1.04) brightness(0.9);
+  object-position: 68% center;
 }
 
 .hero-inner {
@@ -2142,15 +2141,14 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.72) contrast(1.08);
 }
 
 .product-hero-cyber .product-hero-media img {
-  object-position: center;
+  object-position: 68% center;
 }
 
 .product-hero-driving .product-hero-media img {
-  object-position: center 58%;
+  object-position: 74% center;
 }
 
 .about-hero {
@@ -2158,7 +2156,13 @@ p {
 }
 
 .about-hero .product-hero-media img {
-  object-position: center 52%;
+  object-position: 68% center;
+}
+
+.service-card > img.image-focus-right,
+.offering-media > img.image-focus-right,
+.feature-media > img.image-focus-right {
+  object-position: 76% center;
 }
 
 .about-hero .product-hero-inner > p:not(.product-kicker) {

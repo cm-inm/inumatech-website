@@ -1,6 +1,12 @@
 # Visual asset sources
 
-All photographs below are conventional photography downloaded from their original stock-library pages. No AI-generated imagery was used.
+The current website uses AI-generated concept imagery in its hero, service, contact, and research sections. Official company, client, and partner logos and the circuit-board pattern are unchanged.
+
+## AI-generated concept imagery
+
+Ten images were created on 6 November 2026 with the built-in image-generation tool and saved as optimized JPGs in `ai/`. The complete final prompts are recorded in [ai/PROMPTS.md](ai/PROMPTS.md). These visuals illustrate the subject matter; they do not document Inuma's actual offices, installations, or vehicle prototypes.
+
+The conventional photographs listed below are retained as original assets, but are no longer used in the current page layouts.
 
 ## Photography
 
