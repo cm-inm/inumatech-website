@@ -43,7 +43,14 @@ p { text-wrap: pretty; }
 .site-nav .nav-cta { display: inline-flex; white-space: nowrap; }
 .nav-dropdown-menu { right: 0; left: auto; max-width: calc(100vw - 2 * var(--gutter)); }
 .nav-dropdown:not([open]) .nav-dropdown-menu { display: none; }
-.button { min-height: 48px; white-space: normal; text-align: center; }
+.button {
+  min-height: 48px;
+  white-space: normal;
+  text-align: center;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+.button:hover,
+.button:focus-visible { transform: none; }
 a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex="0"]:focus-visible {
   outline: 2px solid var(--red);
   outline-offset: 4px;
@@ -61,13 +68,25 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex="0"]:foc
 }
 .skip-link:focus { transform: translateY(0); }
 
+/* A single, gentle pulse per pointer hover; scale never changes layout. */
+@media (any-hover: hover) and (any-pointer: fine) and (prefers-reduced-motion: no-preference) {
+  html:not([data-input-mode="touch"]) :is(.button, .nav-cta, button, input[type="button"], input[type="submit"], input[type="reset"], [role="button"], .nav-dropdown > summary):hover:not(:disabled):not([aria-disabled="true"]) {
+    animation: button-hover-pulse 300ms ease-in-out 1;
+  }
+}
+
+@keyframes button-hover-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.025); }
+}
+
 /* Preserve the full lockup on touch devices and collapsed navigation. */
 .brand--interactive .brand-mark { display: none; }
 
 @media (min-width: 961px) and (any-hover: hover) and (any-pointer: fine) {
   /* Reserve the original logo footprint in both states: navigation never shifts. */
   .brand--interactive { position: relative; width: 188px; height: 54px; }
-  .brand--interactive .brand-mark {
+  .brand--interactive img.brand-mark {
     display: block;
     position: absolute;
     top: 0;

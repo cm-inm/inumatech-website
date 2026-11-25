@@ -8,6 +8,34 @@ const hoverNavigationQuery = window.matchMedia("(min-width: 961px) and (hover: h
 const mobileNavigationQuery = window.matchMedia("(max-width: 960px)");
 const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+// Touch/pen presses get one complete pulse, even after a quick finger lift.
+// Track the input type so hybrid devices never add a sticky hover pulse.
+const buttonPulseSelector = '.button, .nav-cta, button, input[type="button"], input[type="submit"], input[type="reset"], [role="button"], .nav-dropdown > summary';
+const activeButtonPulses = new WeakMap();
+
+document.addEventListener("pointermove", (event) => {
+  if (event.pointerType === "mouse" && document.documentElement.dataset.inputMode !== "pointer") {
+    document.documentElement.dataset.inputMode = "pointer";
+  }
+}, { passive: true });
+
+document.addEventListener("pointerdown", (event) => {
+  const isTouch = event.pointerType === "touch" || event.pointerType === "pen";
+  document.documentElement.dataset.inputMode = isTouch ? "touch" : "pointer";
+  if (!isTouch || reducedMotionQuery.matches || event.isPrimary === false || event.button !== 0) return;
+
+  const button = event.target instanceof Element ? event.target.closest(buttonPulseSelector) : null;
+  if (!button || button.matches(':disabled, [aria-disabled="true"]') || typeof button.animate !== "function") return;
+
+  activeButtonPulses.get(button)?.cancel();
+  const pulse = button.animate([
+    { transform: "scale(1)" },
+    { transform: "scale(0.975)" },
+    { transform: "scale(1)" },
+  ], { duration: 300, easing: "ease-in-out", iterations: 1 });
+  activeButtonPulses.set(button, pulse);
+}, { passive: true });
+
 const closeNavigation = () => {
   if (!nav || !navToggle) {
     return;
