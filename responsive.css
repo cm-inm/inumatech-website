@@ -61,6 +61,40 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex="0"]:foc
 }
 .skip-link:focus { transform: translateY(0); }
 
+/* Preserve the full lockup on touch devices and collapsed navigation. */
+.brand--interactive .brand-mark { display: none; }
+
+@media (min-width: 961px) and (any-hover: hover) and (any-pointer: fine) {
+  /* Reserve the original logo footprint in both states: navigation never shifts. */
+  .brand--interactive { position: relative; width: 188px; height: 54px; }
+  .brand--interactive .brand-mark {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(54px * 353.01 / 508.95);
+    height: 54px;
+    pointer-events: none;
+  }
+  .brand--interactive .brand-lockup {
+    /* Crop the old mark in the gap before the text. Only the text animates. */
+    clip-path: inset(0 0 0 22%);
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+    pointer-events: none;
+  }
+  .brand--interactive:hover .brand-lockup,
+  .brand--interactive:focus-visible .brand-lockup {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 961px) and (any-hover: hover) and (any-pointer: fine) and (prefers-reduced-motion: reduce) {
+  .brand--interactive .brand-lockup { transform: none; transition: none; }
+}
+
 /* One intentional hero column, with breathing room for the photography. */
 .hero, .product-hero, .about-hero {
   min-height: min(780px, 90svh);
